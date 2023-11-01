@@ -1,0 +1,12 @@
+{
+    "customer_id": "",
+    "account_history": [],
+    "demographics": {
+      "age": 0,
+      "location": ""
+    },
+    "behavioral_patterns": {
+      "avg_transaction_value": 0.0
+    }
+  }
+  
