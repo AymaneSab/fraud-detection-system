@@ -1,0 +1,112 @@
+######################################################################################################################################################################################################
+
+										         Hive Installations
+
+######################################################################################################################################################################################################
+
+###############################################
+	Download and Untar Hive		      #
+###############################################
+
+
+# wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
+# tar xzf apache-hive-3.1.2-bin.tar.gz
+
+
+#######################################################
+  Configure Hive Environment Variables                #
+#######################################################
+
+
+----------> (bashrc)	 
+
+# sudo gedit .bashrc
+
+export HIVE_HOME= "home/hdoop/apache-hive-3.1.2-bin"
+export PATH=$PATH:$HIVE_HOME/bin
+
+# source ~/.bashrc
+
+ 
+----------> Edit hive-config.sh file
+
+# sudo nano $HIVE_HOME/bin/hive-config.sh
+
+export HADOOP_HOME=/home/hdoop/hadoop-3.3.6
+
+
+----------> Create Hive Directories in HDFS
+
+-----> Create tmp Directory
+
+# hdfs dfs -mkdir /tmp
+
+-----> Add write and execute permissions to tmp group members:
+
+# hdfs dfs -chmod g+w /tmp
+
+
+-----> Check if the permissions were added correctly:
+
+# hdfs dfs -ls /
+
+
+-----> Create warehouse Directory
+
+# hdfs dfs -mkdir -p /user/hive/warehouse
+
+
+-----> Add write and execute permissions to tmp group members:
+
+# hdfs dfs -chmod g+w /user/hive/warehouse
+
+
+-----> Check if the permissions were added correctly:
+
+# hdfs dfs -ls /user/hive
+
+
+----------> Configure hive-site.xml File (Optional)
+
+# cd $HIVE_HOME/conf
+
+# cp hive-default.xml.template hive-site.xml
+
+# sudo gedit hive-site.xml
+
+
+#######################################################
+  Initiate Derby  Database                            #
+#######################################################
+
+# $HIVE_HOME/bin/schematool -dbType derby -initSchema
+
+
+#######################################################
+  Launch Hive                                         #
+#######################################################
+
+# cd $HIVE_HOME/bin
+
+# hive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
