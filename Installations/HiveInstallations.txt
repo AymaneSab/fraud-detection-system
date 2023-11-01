@@ -22,7 +22,7 @@
 
 # sudo gedit .bashrc
 
-export HIVE_HOME= "home/hdoop/apache-hive-3.1.2-bin"
+export HIVE_HOME=/usr/local/Hive/apache-hive-3.1.2-bin
 export PATH=$PATH:$HIVE_HOME/bin
 
 # source ~/.bashrc
@@ -32,7 +32,7 @@ export PATH=$PATH:$HIVE_HOME/bin
 
 # sudo nano $HIVE_HOME/bin/hive-config.sh
 
-export HADOOP_HOME=/home/hdoop/hadoop-3.3.6
+export HADOOP_HOME=/home/hadoop/hadoop-3.3.6
 
 
 ----------> Create Hive Directories in HDFS
