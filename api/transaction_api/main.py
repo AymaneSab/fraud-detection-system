@@ -22,10 +22,10 @@ def validate_transaction(transaction):
         print(f"Schema Validation Error: {e}")
         return False
 
-@app.route('/api/transactionData', methods=['GET'])
+@app.route('/api/transactions', methods=['GET'])
 def json_entry():
     valid_transaction = [transaction for transaction in transactions if validate_transaction(transaction)]
     return jsonify(validate_transaction)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5002)
+    app.run(debug=True, port=5004)

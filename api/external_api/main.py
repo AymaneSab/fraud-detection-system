@@ -1,5 +1,4 @@
 import sys
-import time
 import json
 from jsonschema import validate
 from flask import Flask, jsonify
@@ -22,10 +21,10 @@ def validate_external(external):
         print(f"Schema Validation Error: {e}")
         return False
 
-@app.route('/api/externalData', methods=['GET'])
+@app.route('/api/external', methods=['GET'])
 def json_entry():
     valid_external = [external for external in external_data if validate_external(external)]
     return jsonify(valid_external)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5002)
+    app.run(debug=True, port=5003)

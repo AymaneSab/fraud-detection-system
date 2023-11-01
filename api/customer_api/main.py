@@ -1,5 +1,4 @@
 import sys
-import time
 import json
 from jsonschema import validate
 from flask import Flask, jsonify
@@ -22,7 +21,7 @@ def validate_customer(customer):
         print(f"Schema Validation Error: {e}")
         return False
 
-@app.route('/api/customerData', methods=['GET'])
+@app.route('/api/customers', methods=['GET'])
 def json_entry():
     valid_customers = [customer for customer in customers if validate_customer(customer)]
     return jsonify(valid_customers)
