@@ -1,5 +1,3 @@
-# generated_data.py
-
 import random
 from datetime import datetime, timedelta
 
@@ -66,5 +64,3 @@ def generate_data(num_transactions, num_customers):
     return transactions, customers, external_data
 
 transactions, customers, external_data = generate_data(1000, 100)
-
-print(transactions)

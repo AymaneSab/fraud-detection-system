@@ -1,7 +1,15 @@
 # api/customer_api/main.py
 
+import os 
+import sys 
 from flask import Flask, jsonify
+
+sys.path.append('/Users/sabri/Desktop/Study /Youcode/Github/Sprint_4/fraud-detection-system/api') 
+
 from generated_data import customers
+
+
+
 
 app = Flask(__name__)
 
