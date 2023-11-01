@@ -53,7 +53,7 @@ fraud-detection-system/
 ├── .gitignore                  # Git ignore file
 ├── README.md                   # Project README
 ├── requirements.txt            # Python dependencies
-├── LICENSE                      # Project license
+├── LICENSE                     # Project license
 └── .vscode/                    # VSCode-specific configurations
     └── settings.json
 ```
