@@ -1,5 +1,7 @@
 # Fraud Detection System
 
+![Alt text](https://miro.medium.com/v2/resize:fit:1400/0*aH57NAkEfKj0zLoj.jpg)
+
 ## Project Architectur 
 ```
 fraud-detection-system/
