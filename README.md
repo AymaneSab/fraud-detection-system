@@ -118,5 +118,5 @@ List the contributors and their roles in the project.
 
 ## License
 
-Specify the project's license.
+Licence(MIT)
 
