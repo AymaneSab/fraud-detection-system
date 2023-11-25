@@ -120,5 +120,5 @@ List the contributors and their roles in the project.
 
 ## License
 
-Licence(MIT)
+https://github.com/AymaneSab/fraud-detection-system/blob/main/LICENSE
 
