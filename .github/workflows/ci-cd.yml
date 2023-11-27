@@ -30,4 +30,3 @@ jobs:
       - name: Lint Code
         run: |
           pylint fraud-detection-system
-s
