@@ -17,7 +17,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: fraude_detection_system_env
-          environment-file: '/home/runner/work/fraud-detection-system/env/fraude_detection_system_env.yaml'
+          environment-file: '/env/fraude_detection_system_env.yaml'
       - name: Install Dependencies
         run: |
           conda install --yes --file "/Users/sabri/Desktop/Study /Youcode/Github/Sprint_4/fraud-detection-system/requirements.txt"
