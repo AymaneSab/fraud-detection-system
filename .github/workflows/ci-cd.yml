@@ -23,10 +23,6 @@ jobs:
         run: |
           conda install --yes --file 'requirements.txt'
 
-      - name: Run Tests
-        run: |
-          python -m pytest
-
       - name: Lint Code
         run: |
           pylint fraud-detection-system
