@@ -17,7 +17,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: fraude_detection_system_env
-          environment-file: '${{ github.workspace }}/project_env/fraude_detection_system_env.yaml'
+          environment-file: '${{ github.workspace }}/project_env/env.yml'
 
       - name: Install Dependencies
         run: |
