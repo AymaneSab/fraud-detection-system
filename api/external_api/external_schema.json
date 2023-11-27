@@ -1,9 +1,28 @@
 {
-  "blacklist_info": [],
-  "credit_scores": {
-    "customer_id": 0
+  "type": "object",
+  "properties": {
+    "blacklist_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "credit_scores": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 850
+      }
+    },
+    "fraud_reports": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 5
+      }
+    }
   },
-  "fraud_reports": {
-    "customer_id": 0
-  }
+  "required": ["blacklist_info", "credit_scores", "fraud_reports"]
 }
