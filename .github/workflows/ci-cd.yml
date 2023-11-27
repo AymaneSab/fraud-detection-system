@@ -19,6 +19,9 @@ jobs:
           activate-environment: fraude_detection_system_env
           environment-file: 'project_env/env.yml'
 
+      - name: Activate Conda Environment
+        run: source activate fraude_detection_system_env
+
       - name: Install Dependencies
         run: |
           conda install --yes --file 'requirements.txt'
