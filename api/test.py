@@ -2,7 +2,7 @@ import requests
 import json
 
 def get_customer_data():
-    url = 'http://localhost:5002/api/externalData'
+    url = 'http://localhost:5003/api/external'
     
     try:
         response = requests.get(url)
