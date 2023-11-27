@@ -93,6 +93,17 @@ export HADOOP_HOME=/home/hadoop/hadoop-3.3.6
 
 
 
+Put the following at the beginning of hive-site.xml
+
+
+  <property>
+    <name>system:java.io.tmpdir</name>
+    <value>/tmp/hive/java</value>
+  </property>
+  <property>
+    <name>system:user.name</name>
+    <value>${user.name}</value>
+  </property>
 
 
 
