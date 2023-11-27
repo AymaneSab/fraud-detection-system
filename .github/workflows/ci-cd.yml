@@ -17,7 +17,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: fraude_detection_system_env
-          environment-file: '/project_env/env.yml'
+          environment-file: '/Users/sabri/Desktop/Study /Youcode/Github/Sprint_4/fraud-detection-system/project_env/env.yml'
 
       - name: Install Dependencies
         run: |
@@ -30,3 +30,4 @@ jobs:
       - name: Lint Code
         run: |
           pylint fraud-detection-system
+s
