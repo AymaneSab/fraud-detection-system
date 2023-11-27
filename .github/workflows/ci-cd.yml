@@ -21,7 +21,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          conda install --yes --file "/Users/sabri/Desktop/Study /Youcode/Github/Sprint_4/fraud-detection-system/requirements.txt"
+          conda install --yes --file 'requirements.txt'
 
       - name: Run Tests
         run: |
