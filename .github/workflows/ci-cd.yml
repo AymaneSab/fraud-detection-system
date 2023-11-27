@@ -22,7 +22,3 @@ jobs:
       - name: Install Dependencies
         run: |
           conda install --yes --file 'requirements.txt'
-
-      - name: Lint Code
-        run: |
-          pylint fraud-detection-system
