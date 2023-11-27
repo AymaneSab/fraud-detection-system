@@ -13,9 +13,9 @@ jobs:
     
     steps:
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
-        python-version: 3.x  # Specify the Python version you're using
+        python-version: 3.9  # Specify the Python version you're using
 
     - name: Install dependencies
       run: |
