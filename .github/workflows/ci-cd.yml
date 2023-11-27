@@ -1,0 +1,29 @@
+# .github/workflows/ci-cd.yml
+
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main  # Or the branch you want to trigger the workflow on
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Specify the Python version you're using
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        source venv/bin/activate
+        pytest  # Replace with the command you use to run tests
