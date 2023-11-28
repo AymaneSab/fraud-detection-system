@@ -1,7 +1,8 @@
 import sys
 import json
 from jsonschema import validate
-from flask import Flask, jsonify
+from flask import Flask, jsonify, stream_with_context
+import time
 
 sys.path.append('/Users/sabri/Desktop/Study /Youcode/Github/Sprint_4/fraud-detection-system/api/') 
 
@@ -23,8 +24,13 @@ def validate_customer(customer):
 
 @app.route('/api/customers', methods=['GET'])
 def json_entry():
-    valid_customers = [customer for customer in customers if validate_customer(customer)]
-    return jsonify(valid_customers)
+    def generate():
+        for customer in customers:
+            if validate_customer(customer):
+                yield json.dumps(customer) + '\n'
+                time.sleep(1)  # Wait for two seconds before sending the next customer
+
+    return app.response_class(stream_with_context(generate()), mimetype='application/json')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5002)
