@@ -2,4 +2,3 @@ jsonschema
 flask
 pylint
 schedule
-unittest
