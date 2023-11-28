@@ -2,7 +2,7 @@ import sys
 import time
 import json
 from jsonschema import validate
-from flask import Flask, jsonify
+from flask import Flask, jsonify, stream_with_context
 
 sys.path.append('/Users/sabri/Desktop/Study /Youcode/Github/Sprint_4/fraud-detection-system/api/') 
 
@@ -22,10 +22,15 @@ def validate_transaction(transaction):
         print(f"Schema Validation Error: {e}")
         return False
 
+def generate_transactions():
+    for transaction in transactions:
+        if validate_transaction(transaction):
+            yield json.dumps(transaction) + '\n'
+            time.sleep(1)  # Wait for two seconds before sending the next transaction
+
 @app.route('/api/transactions', methods=['GET'])
 def json_entry():
-    valid_transaction = [transaction for transaction in transactions if validate_transaction(transaction)]
-    return jsonify(valid_transaction)
+    return app.response_class(stream_with_context(generate_transactions()), mimetype='application/json')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5004)
