@@ -1,0 +1,10 @@
+{
+  "transaction_id": "string",
+  "date_time": "string",
+  "amount": "number",
+  "currency": "string",
+  "merchant_details": "string",
+  "customer_id": "string",
+  "transaction_type": "string",
+  "location": "string"
+}

@@ -1,0 +1,5 @@
+{
+  "blacklist_info": "array",
+  "credit_scores": "map<int>",
+  "fraud_reports": "map<int>"
+}
