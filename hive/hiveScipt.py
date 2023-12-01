@@ -101,7 +101,7 @@ conn_logger = setup_logging("Log/Hive/Conn_Log_Files", "Hive_Connection")
 query_logger = setup_logging("Log/Hive/Query_Log_Files", "Hive_Query")
 database_conn_logger = setup_logging("Log/Hive/Database_Log_Files", "Hive_Database_Creation")
 
-hive_database_name = "transactions"
+hive_database_name = "Transactions"
 host = "localhost"
 port = 10001
 
