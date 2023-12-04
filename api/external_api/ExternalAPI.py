@@ -3,12 +3,12 @@ import json
 from jsonschema import validate
 from flask import Flask, jsonify
 
-sys.path.append('/Users/sabri/Desktop/Study /Youcode/Github/Sprint_4/fraud-detection-system/api/') 
+sys.path.append('/home/hdoop/fraud-detection-system/api') 
 
 from generated_data import external_data  
 
 # Load the schema from external_schema.json
-with open('/Users/sabri/Desktop/Study /Youcode/Github/Sprint_4/fraud-detection-system/api/external_api/external_schema.json') as schema_file:
+with open('/home/hdoop/fraud-detection-system/api/external_api/external_schema.json') as schema_file:
     external_schema = json.load(schema_file)
 
 app = Flask(__name__)
