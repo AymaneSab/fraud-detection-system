@@ -89,24 +89,3 @@ export HADOOP_HOME=/home/hadoop/hadoop-3.3.6
 # cd $HIVE_HOME/bin
 
 # hive
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
