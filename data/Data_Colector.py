@@ -96,13 +96,15 @@ def getTransactions(logger):
 
 def getExternals(logger):
     try:
-        external_api_url    = 'http://localhost:5003/api/external'
+        external_api_url  = 'http://localhost:5003/api/external'
 
         # Function to collect data from API
         response = requests.get(external_api_url)
-        if response.status_code == 200:
-            logger.info(f"External data: {response.json()}")
 
+        if response.status_code == 200:
+
+            External_json = response.json() 
+            logger.info(f"External data: {External_json}")
         else:
             print(f"Error collecting data from {external_api_url}")
             return None

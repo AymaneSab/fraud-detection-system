@@ -4,12 +4,12 @@ import json
 from jsonschema import validate
 from flask import Flask, jsonify, stream_with_context
 
-sys.path.append('/Users/sabri/Desktop/Study /Youcode/Github/Sprint_4/fraud-detection-system/api/') 
+sys.path.append('/home/hdoop/fraud-detection-system/api') 
 
 from generated_data import transactions  
 
 # Load the schema from customer_schema.json
-with open('/Users/sabri/Desktop/Study /Youcode/Github/Sprint_4/fraud-detection-system/api/transaction_api/transaction_schema.json') as schema_file:
+with open('/home/hdoop/fraud-detection-system/api/transaction_api/transaction_schema.json') as schema_file:
     transaction_schema = json.load(schema_file)
 
 app = Flask(__name__)
