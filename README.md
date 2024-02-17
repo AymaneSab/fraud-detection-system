@@ -116,8 +116,7 @@ Include instructions on how to run the project, dependencies, and any configurat
 
 ## Contributors
 
-List the contributors and their roles in the project.
-
+@Aymane Sabri
 ## License
 
 https://github.com/AymaneSab/fraud-detection-system/blob/main/LICENSE
